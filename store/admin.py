@@ -15,4 +15,3 @@ class ProductAdmin(admin.ModelAdmin):
                     'in_stock', 'created', 'updated']
     list_filter = ['in_stock', 'is_active']
     prepopulated_fields = {'slug': ('title',)}
-
