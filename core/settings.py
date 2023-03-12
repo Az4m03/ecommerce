@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-av0=xs&l-1l!1nh_7)k*tg082y4jerj5d$-t&rvg95mn9dz5l@
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ecommerce.com', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
