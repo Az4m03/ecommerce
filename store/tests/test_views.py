@@ -8,7 +8,6 @@ from django.urls import reverse
 from store.models import Category, Product
 from store.views import product_all
 
-
 # @skip()
 # class TestSkip(TestCase):
 #     def test_skip_example(self):
@@ -43,14 +42,14 @@ class TestViewResponses(TestCase):
         response = product_all(request)
         html = response.content.decode('utf8')
         print(html)
-        self.assertIn('<title>Home</title>', html)
+        self.assertIn('<title>BookStore</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)
 
     def test_view_function(self):
-        request = self.factory.get('/item/django-beginners')
+        request = self.factory.get('/django-beginners')
         response = product_all(request)
         html = response.content.decode('utf8')
-        self.assertIn('<title>Home</title>', html)
+        self.assertIn('<title>BookStore</title>', html)
         self.assertTrue(html.startswith('\n<!DOCTYPE html>\n'))
         self.assertEqual(response.status_code, 200)
