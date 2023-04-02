@@ -29,3 +29,7 @@ def basket_delete(request):
     if request.POST.get('action') == 'post':
         product_id = int(request.POST.get('productid'))
         basket.delete(product=product_id)
+        basketqty = basket.__len__()
+        response = JsonResponse({'qty': basketqty})
+        return response
+
